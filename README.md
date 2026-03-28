@@ -188,4 +188,4 @@ That's fine. Document what you'd do next in your APPROACH.md. We'd rather see th
 Absolutely. Use whatever helps you build a better solution.
 
 **What if I have questions during the project?**
-Email us at [hiring contact]. We're happy to clarify requirements, but we intentionally leave room for you to make your own decisions.
+Email me at stuart@soar.com. I am happy to clarify requirements, but we intentionally leave room for you to make your own decisions.
