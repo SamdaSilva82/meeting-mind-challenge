@@ -12,11 +12,17 @@
     "db:migrate": "turbo db:migrate --filter=api"
   },
   "devDependencies": {
+    "ts-node": "^10.9.2",
     "turbo": "^2.4.0",
     "typescript": "^5.7.0"
   },
   "engines": {
     "node": ">=20.0.0"
   },
-  "packageManager": "npm@10.8.0"
+  "packageManager": "npm@10.8.0",
+  "dependencies": {
+    "@nestjs/typeorm": "^11.0.0",
+    "sqlite3": "^5.1.7",
+    "typeorm": "^0.3.28"
+  }
 }

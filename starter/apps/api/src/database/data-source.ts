@@ -1,5 +1,7 @@
-import 'dotenv/config';
+import { loadApiEnvFiles } from '../config/api-env';
 import { DataSource, DataSourceOptions } from 'typeorm';
+
+loadApiEnvFiles();
 
 export const dataSourceOptions: DataSourceOptions = {
   type: 'postgres',

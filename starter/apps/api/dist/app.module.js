@@ -8,20 +8,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AppModule = void 0;
 const common_1 = require("@nestjs/common");
-const typeorm_1 = require("@nestjs/typeorm");
+const config_1 = require("@nestjs/config");
+const api_env_1 = require("./config/api-env");
 const health_module_1 = require("./health/health.module");
-const data_source_1 = require("./database/data-source");
+const meetings_module_1 = require("./meetings/meetings.module");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
 exports.AppModule = AppModule = __decorate([
     (0, common_1.Module)({
         imports: [
-            typeorm_1.TypeOrmModule.forRoot({
-                ...data_source_1.dataSourceOptions,
-                autoLoadEntities: true,
+            config_1.ConfigModule.forRoot({
+                isGlobal: true,
+                expandVariables: true,
+                envFilePath: (0, api_env_1.getApiEnvFilePaths)(),
             }),
             health_module_1.HealthModule,
+            meetings_module_1.MeetingsModule,
         ],
     })
 ], AppModule);

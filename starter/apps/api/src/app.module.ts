@@ -1,15 +1,18 @@
 import { Module } from '@nestjs/common';
-import { TypeOrmModule } from '@nestjs/typeorm';
+import { ConfigModule } from '@nestjs/config';
+import { getApiEnvFilePaths } from './config/api-env';
 import { HealthModule } from './health/health.module';
-import { dataSourceOptions } from './database/data-source';
+import { MeetingsModule } from './meetings/meetings.module';
 
 @Module({
   imports: [
-    TypeOrmModule.forRoot({
-      ...dataSourceOptions,
-      autoLoadEntities: true,
+    ConfigModule.forRoot({
+      isGlobal: true,
+      expandVariables: true,
+      envFilePath: getApiEnvFilePaths(),
     }),
     HealthModule,
+    MeetingsModule,
   ],
 })
 export class AppModule {}

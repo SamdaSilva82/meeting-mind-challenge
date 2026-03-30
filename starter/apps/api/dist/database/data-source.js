@@ -1,8 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.dataSourceOptions = void 0;
-require("dotenv/config");
+const api_env_1 = require("../config/api-env");
 const typeorm_1 = require("typeorm");
+(0, api_env_1.loadApiEnvFiles)();
 exports.dataSourceOptions = {
     type: 'postgres',
     url: process.env.DATABASE_URL || 'postgres://meetingmind:meetingmind@localhost:5432/meetingmind',

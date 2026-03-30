@@ -1,0 +1,3 @@
+# Accidental tsc/nest emit into source (breaks ts-node — Node prefers .js over .ts)
+src/**/*.js
+src/**/*.js.map
