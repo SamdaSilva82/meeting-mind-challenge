@@ -24,7 +24,7 @@ npm install
 # 3. Set up environment variables
 cp .env.example .env
 Edit the .env file and add your Google Gemini API key:
-GOOGLE_API_KEY=AIzaSyDfywCfWVuuI6EwIsMEKjnMxPSrp0gJDXY
+GOOGLE_API_KEY= Get a key from Gemini or use whichever one you decide.
 # 4. Start the development servers
 npx turbo dev
 Access Points
